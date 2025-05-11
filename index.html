@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="What Matters for Batch Online Reinforcement Learning in Robotics?">
+  <meta name="keywords" content="Batch Online RL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Matters for Batch Online Reinforcement Learning in Robotics?</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">What Matters for Batch Online Reinforcement Learning in Robotics?</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://dblp.org/pid/323/8972.html">Perry Dong</a>,</span>
+            <span class="author-block">
+              <a href="https://suvirpmirchandani.com/">Suvir Mirchandani</a>,</span>
+            <span class="author-block">
+              <a href="https://dorsa.fyi/">Dorsa Sadigh</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Stanford University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/pdfs/.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+                <a href="./static/pdfs/.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>ArXiv</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                      <i class="fab fa-youtube"></i>
+                      <i class="fab fa-github"></i>
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls playsinline height="100%">
+        <source src="./static/videos/.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        
+      </h2>
+    </div>
+  </div>
+</section>
+ -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          The ability to learn from large batches of autonomously collected data for policy improvement—a paradigm we refer to as <i>batch online reinforcement learning</i>—holds the promise of enabling truly scalable robot learning by significantly reducing the need for human effort of data collection while getting benefits from self-improvement. Yet, despite the promise of this paradigm, it remains challenging to achieve due to algorithms not being able to learn effectively from the autonomous data. For example, prior works have applied imitation learning and filtered imitation learning methods to the batch online RL problem, but these algorithms often fail to efficiently improve from the autonomously collected data or converge quickly to a suboptimal point. This raises the question of what matters for effective batch online reinforcement learning in robotics. Motivated by this question, we perform a systematic empirical study of three axes—(i) algorithm class, (ii) policy extraction methods, and (iii) policy expressivity—and analyze how these axes affect performance and scaling with the amount of autonomously collected data. Through our analysis, we make several observations. First, we observe that the use of Q-functions to guide batch online RL significantly improves performance over imitation-based methods. Building on this, we show that an implicit method of policy extraction—via choosing the best action in the distribution of the policy—is preferred over traditional explicit policy extraction methods from offline RL. Next, we show that an expressive policy class is necessary over less expressive policy classes. Based on this analysis, we propose a general recipe for effective batch online RL. We then show a simple addition to the recipe, namely using temporally-correlated noise to obtain more diversity, results in further performance gains. Our recipe obtains significantly better performance and scaling compared to prior methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="hero  is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="publication-image">
+          <img src="static/images/teaser.png" alt="Teaser image" width="100%">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <br>
+          <h2 class="subtitle has-text-centered">
+          We consider the batch online RL problem setting, in which a policy is trained on an initial dataset, used to collect batches of autonomous data during deployment, and then re-trained on the accumulated dataset. We analyze three critical axes in a spectrum of approaches to the batch online RL problem: <span style="color: rgb(76,31,141)">policy expressivity</span>, <span style="color: rgb(193,128,44)">algorithm class</span>, and <span style="color: rgb(63,143,145)">policy extraction method</span>. We propose a general effective recipe of training an expressive IL policy as the actor, value-based RL to learn a Q-function, and performing implicit policy extraction with the Q-function to get a policy for rollouts.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rounded">
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Key Findings</h2>        
+
+        <p style="text-align: left;">
+          <b>Key Finding 1: Algorithm Class.</b> Value-based RL is necessary for overcoming suboptimal convergence
+          of filtered imitation learning methods, because it is able to better leverage diversity in autonomous data.
+          Further, value-based RL scales better with larger batches of autonomous data.
+          <br><br>
+          <center>Performance of Different Algorithm Classes over Multiple Iterations</center>
+          <img src="./static/images/alg_aggregate.png" width="100%">
+          <br>
+          <center>Final Performance of Different Algorithm Classes with Different Data Scales</center>
+          <img src="./static/images/scale_aggregate.png" width="100%">
+          <br><br>
+        </p>
+        <p style="text-align: left;">
+          <b>Key Finding 2: Policy Extraction Method.</b> Implicit policy extraction—wherein the best action in the
+          distribution of the policy is selected—significantly outperforms explicit policy extraction in batch online RL settings.
+          <br><br>
+          <center>Performance of Value-Based RL with Different Policy Extraction Methods, Before and After Batch Online RL</center>
+          <img src="./static/images/policy_aggregate.png" width="100%">
+          <br><br>
+        </p>
+        <p style="text-align: left;">
+          <b>Key Finding 3. Policy Expressivity.</b> Expressive policy classes outperform less expressive policy classes
+          with either explicit or implicit policy extraction methods.
+          <br><br>
+          <center>Performance of Value-Based RL with Different Policy Classes, Before and After Batch Online RL</center>
+          <img src="./static/images/expressive_aggregate.png" width="100%">
+          <br><br>
+        </p>
+        <p style="text-align: left;">
+          
+        </p>
+        <p style="text-align: left;">
+          <b>Real-Robot Experiment.</b> We validate the recipe for batch online RL on a challenging real-world manipulation task of hanging 
+          a tape roll on a hook.
+          <br><br>
+        </p>
+        <p style="text-align: center">
+          <center>Performance of the Full Recipe over Multiple Iterations of Batch Online RL</center>
+          <center>
+          <img src="./static/images/tape_env.png" hspace="40pt" width="40%">
+          <img src="./static/images/recipe_robot.png" width="30%">
+          </center>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Sample Rollouts</h2>
+        <p>
+          Select one of the tasks below to view trajectories at the beginning, middle, and end of running batch online RL.
+          <br>
+          <br>
+        </p>
+        <div class="content has-text-justified">
+          <div class="task-selector has-text-centered">
+            <button class="button is-light" onclick="changeTask('lift', 'static/videos/lift_start.mp4', 'static/videos/lift_mid.mp4', 'static/videos/lift_last.mp4')">Lift</button>
+            <button class="button is-light" onclick="changeTask('can', 'static/videos/can_start.mp4', 'static/videos/can_mid.mp4', 'static/videos/can_last.mp4')">Can</button>
+            <button class="button is-light" onclick="changeTask('square', 'static/videos/square_start.mp4', 'static/videos/square_mid.mp4', 'static/videos/square_last.mp4')">Square</button>
+            <button class="button is-light" onclick="changeTask('tape', 'static/videos/tape_start.mp4', null, 'static/videos/tape_last.mp4')">Tape</button>
+
+          </div>
+          
+          <center>
+            <div id="task-video" class="video-container">
+              <h4 id="video-title" class="video-title"></h4>
+              <div class="video-wrapper">
+                <div class="video-item" id="task-video-item-1">
+                  <video id="task-video-player-1" autoplay loop muted controls>
+                    <source src="" type="video/mp4">
+                  </video>
+                  <div class="video-label">Beginning (1x)</div>
+                </div>
+                <div class="video-item" id="task-video-item-2">
+                  <video id="task-video-player-2" autoplay loop muted controls>
+                    <source src="" type="video/mp4">
+                  </video>
+                  <div class="video-label">Middle (1x)</div>
+                </div>
+                <div class="video-item" id="task-video-item-3">
+                  <video id="task-video-player-3" autoplay loop muted controls>
+                    <source src="" type="video/mp4">
+                  </video>
+                  <div class="video-label">End (1x)</div>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="rounded">
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@article{dong2025batch,
+    title   = {What Matters for Batch Online Reinforcement Learning in Robotics?},
+    author  = {Perry Dong and Suvir Mirchandani and Dorsa Sadigh and Chelsea Finn},
+    journal = {arXiv},
+    year    = {2025},
+}
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p></p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>,
+            courtesy of <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, <a href="https://peract.github.io/">PerAct</a>, and <a href="https://emprise.cs.cornell.edu/flair/"> FLAIR.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
